@@ -19,4 +19,6 @@ Calculate the dist between two vector
     2.8 JSD(Jensen-shannon divergence)
 
 ## usage: 
-> import VectorDist
+> from VectorDist import *
+> Distance(Vector1,Vector2).Euclidean()
+> Distance(Vector1,Vector2).JSD()
