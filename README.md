@@ -2,7 +2,7 @@
 Calculate the dist between two vector
 
 ## This module include TWO major section:
-### 1. Normalize the vection
+### 1. Normalize the vector
 ```
     1.1 MaxMIn
     1.2 Z_Score
