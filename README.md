@@ -13,8 +13,7 @@ Calculate the dist between two vector
     2.2 Euclidean
     2.3 Chebyshev
     2.4 Cosine
-    2.5 KLD, Kullback–Leibler divergence
-    2.6 JSD, Jensen-shannon divergence
+    2.5 KLD(Kullback–Leibler divergence)
+    2.6 JSD(Jensen-shannon divergence)
     2.7 Hamming
     2.8 Jaccard
-    
