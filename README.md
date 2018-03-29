@@ -17,3 +17,6 @@ Calculate the dist between two vector
     2.6 Jaccard
     2.7 KLD(Kullback–Leibler divergence)
     2.8 JSD(Jensen-shannon divergence)
+
+## usage: 
+> import VectorDist
