@@ -37,13 +37,17 @@ class Distance: ### Distance between vectors
 		return 1 - np.dot(self.p,self.q)/(np.linalg.norm(self.p)*np.linalg.norm(self.q))
 	# KLD and JSD distance: p,q required probability distribution
 	def KLD(self):
-		p,q = zip(*filter(lambda (x,y): x!=0 or y!=0, zip(self.p,self.q))) # remove both p and q value equal 0
+		#p,q = zip(*filter(lambda (x,y): x!=0 or y!=0, zip(self.p,self.q))) # remove both p and q value equal 0  ## used for python2 but not python3
+		p = [x for x,y in zip(self.p,self.q) if x+y!=0]
+		q = [y for x,y in zip(self.p,self.q) if x+y!=0]
 		p = p + np.spacing(1)						  
 		q = q + np.spacing(1)
 		dist = sum([_p * math.log(_p/_q,2) for (_p,_q) in zip(p,q)])
 		return dist
 	def JSD(self):
-		p,q = zip(*filter(lambda (x,y): x!=0 or y!=0, zip(self.p,self.q)))
+		#p,q = zip(*filter(lambda (x,y): x!=0 or y!=0, zip(self.p,self.q)))
+		p = [x for x,y in zip(self.p,self.q) if x+y!=0]
+		q = [y for x,y in zip(self.p,self.q) if x+y!=0]
 		M = [0.5*(_p+_q) for _p,_q in zip(p,q)]
 		p = p + np.spacing(1)						  
 		q = q + np.spacing(1)
